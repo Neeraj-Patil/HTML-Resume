@@ -1,80 +1,110 @@
 body {
   margin: 0;
-  font-family: "Inter", Arial, sans-serif;
-  background: #f6f7fb;
-  color: #111;
+  font-family: Inter, Arial, sans-serif;
+  background: #0b1220;
+  color: #e5e7eb;
 }
 
 /* HERO */
 .hero {
-  background: linear-gradient(135deg, #0f172a, #1e293b);
-  color: white;
-  padding: 80px 20px;
+  background: linear-gradient(135deg, #0f172a, #111827);
+  padding: 90px 20px;
   text-align: center;
 }
 
+.hero-inner {
+  max-width: 900px;
+  margin: auto;
+}
+
 .hero h1 {
-  font-size: 42px;
+  font-size: 52px;
   margin-bottom: 10px;
 }
 
-.subtitle {
+.role {
+  color: #93c5fd;
+  font-size: 18px;
+}
+
+.summary {
+  margin-top: 15px;
   color: #cbd5e1;
-  margin-bottom: 20px;
+  line-height: 1.6;
 }
 
-.hero-links a {
+.cta a {
+  display: inline-block;
+  margin: 10px 8px;
+  padding: 10px 16px;
+  border-radius: 8px;
+  background: #2563eb;
   color: white;
-  margin: 0 10px;
   text-decoration: none;
-  padding: 8px 14px;
-  border: 1px solid #334155;
-  border-radius: 6px;
-  transition: 0.2s;
+  font-weight: 500;
 }
 
-.hero-links a:hover {
-  background: white;
-  color: #0f172a;
+.cta a:hover {
+  background: #1d4ed8;
 }
 
-/* SECTIONS */
-.section {
+/* STATS */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
   max-width: 1000px;
   margin: 40px auto;
   padding: 0 20px;
 }
 
+.stat {
+  background: #111827;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #1f2937;
+}
+
+.stat h2 {
+  color: #60a5fa;
+  margin: 0;
+}
+
+/* SECTIONS */
+.section {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
 .section h2 {
   margin-bottom: 20px;
-  font-size: 24px;
+  color: #93c5fd;
 }
 
 /* CARDS */
 .card {
-  background: white;
+  background: #111827;
   padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+  border-radius: 14px;
   margin-bottom: 20px;
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
-  transform: translateY(-3px);
+  border: 1px solid #1f2937;
 }
 
 .card h3 {
-  margin: 0 0 5px;
+  margin-top: 0;
+  color: white;
 }
 
 .card span {
   font-size: 12px;
-  color: gray;
+  color: #9ca3af;
 }
 
 .card ul {
   margin-top: 10px;
+  color: #d1d5db;
 }
 
 /* GRID */
@@ -88,5 +118,5 @@ body {
 footer {
   text-align: center;
   padding: 30px;
-  color: gray;
+  color: #6b7280;
 }
