@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: Inter, Arial, sans-serif;
-  background: #0b1220;
+  font-family: Inter, system-ui, Arial, sans-serif;
+  background: radial-gradient(circle at top, #0b1220, #050814);
   color: #e5e7eb;
+  line-height: 1.6;
 }
 
-/* HERO */
+/* HERO — now softer + modern */
 .hero {
-  background: linear-gradient(135deg, #0f172a, #111827);
-  padding: 90px 20px;
+  padding: 120px 20px 80px;
   text-align: center;
 }
 
@@ -18,83 +18,110 @@ body {
 }
 
 .hero h1 {
-  font-size: 52px;
-  margin-bottom: 10px;
+  font-size: 56px;
+  margin: 0;
+  letter-spacing: -1px;
 }
 
 .role {
+  margin-top: 10px;
   color: #93c5fd;
   font-size: 18px;
 }
 
 .summary {
-  margin-top: 15px;
+  margin-top: 20px;
   color: #cbd5e1;
-  line-height: 1.6;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* CTA — modern pill buttons */
+.cta {
+  margin-top: 25px;
 }
 
 .cta a {
   display: inline-block;
-  margin: 10px 8px;
+  margin: 6px;
   padding: 10px 16px;
-  border-radius: 8px;
-  background: #2563eb;
-  color: white;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.15);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+  color: #93c5fd;
   text-decoration: none;
-  font-weight: 500;
+  transition: all 0.2s ease;
 }
 
 .cta a:hover {
-  background: #1d4ed8;
+  background: rgba(37, 99, 235, 0.35);
+  transform: translateY(-2px);
 }
 
-/* STATS */
+/* STATS — floating cards, no harsh grid boxes */
 .stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 18px;
+  margin: 40px auto 80px;
   max-width: 1000px;
-  margin: 40px auto;
   padding: 0 20px;
 }
 
 .stat {
-  background: #111827;
+  flex: 1;
+  min-width: 180px;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 16px;
+  background: rgba(17, 24, 39, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
   text-align: center;
-  border: 1px solid #1f2937;
 }
 
 .stat h2 {
-  color: #60a5fa;
   margin: 0;
+  color: #60a5fa;
+  font-size: 28px;
 }
 
-/* SECTIONS */
+/* CONTENT FLOW — THIS removes "stiff sections" */
 .section {
-  max-width: 1000px;
-  margin: 50px auto;
+  max-width: 900px;
+  margin: 80px auto;
   padding: 0 20px;
 }
 
+/* Section title feels lighter */
 .section h2 {
-  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 500;
   color: #93c5fd;
+  margin-bottom: 20px;
+  letter-spacing: 0.3px;
 }
 
-/* CARDS */
+/* CARDS — now soft floating glass style */
 .card {
-  background: #111827;
-  padding: 20px;
-  border-radius: 14px;
-  margin-bottom: 20px;
-  border: 1px solid #1f2937;
+  padding: 22px;
+  margin-bottom: 18px;
+  border-radius: 16px;
+  background: rgba(17, 24, 39, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  background: rgba(17, 24, 39, 0.75);
 }
 
 .card h3 {
-  margin-top: 0;
-  color: white;
+  margin: 0 0 6px;
+  font-size: 18px;
 }
 
 .card span {
@@ -102,21 +129,38 @@ body {
   color: #9ca3af;
 }
 
+/* LISTS — cleaner */
 .card ul {
   margin-top: 10px;
+  padding-left: 18px;
   color: #d1d5db;
 }
 
-/* GRID */
+.card ul li {
+  margin-bottom: 6px;
+}
+
+/* GRID — no harsh boxes, just spacing */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 18px;
+}
+
+/* REMOVE "boxed layout feel" */
+.section::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, #3b82f6, transparent);
+  margin-bottom: 18px;
+  opacity: 0.5;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 60px 20px 40px;
   color: #6b7280;
 }
